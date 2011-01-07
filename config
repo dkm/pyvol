@@ -1,0 +1,17 @@
+[DEFAULT]
+verbose = True
+
+[project]
+target = git:target
+start-revision = INITIAL
+root-directory = /home/dkm/bzr/tailor
+state-file = tailor.state
+source = bzr:source
+subdir = .
+
+[bzr:source]
+repository = ../pyvol/
+
+[git:target]
+repository = /home/dkm/git/pyvol/
+
