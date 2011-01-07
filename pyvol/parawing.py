@@ -1,4 +1,22 @@
-# -*- coding: iso-8859-1 -*-
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+# Copyright (C) 2009 Marc PoulhiÃ¨s
+#
+# pyvol, flight logbook
+#
+# This is free software: you can redistribute it and/or modify
+# it under the terms of the GNU General Public License as published by
+# the Free Software Foundation, either version 3 of the License, or
+# (at your option) any later version.
+#
+# This is distributed in the hope that it will be useful,
+# but WITHOUT ANY WARRANTY; without even the implied warranty of
+# MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+# GNU General Public License for more details.
+#
+# You should have received a copy of the GNU General Public License
+# along with Plopifier.  If not, see <http://www.gnu.org/licenses/>.
+
 import cookielib, urllib2, urllib
 from urllib2 import Request
 import re
@@ -128,7 +146,7 @@ class Carnet:
         #one of the following:
         # Gonflage = 1
         # Pente ecole 10
-        # Bi pédagogique 15
+        # Bi pÃ©dagogique 15
         # Plouf 20
         # Grand vol 30
         # Vol local 40
@@ -136,7 +154,7 @@ class Carnet:
         # Triangle FAI 51
         # Triangle 52
         # Vol rando 60
-        # Vol à ski 61 
+        # Vol Ã  ski 61 
         # Speed riding 62
         # Vol treuil 70
         # Pilotage 79
@@ -201,7 +219,7 @@ class Carnet:
 	# Bof 2
         # Pas mal 3
         # Top 4
-        # Génial ! 5
+        # GÃ©nial ! 5
 
         # if enabled, will be published
         #form['visible']
@@ -225,7 +243,7 @@ class Carnet:
         lines = handle.readlines()
 
         for i in lines:
-            m = re.search("Vous n'êtes pas authentifié", i)
+            m = re.search("Vous n'Ãªtes pas authentifiÃ©", i)
 ##            print i
             if m != None:
                 raise ParawingException("Login timed out")
